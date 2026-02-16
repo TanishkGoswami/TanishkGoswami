@@ -1,5 +1,5 @@
 # 💫 About Me:
-Full-Stack Developer with two years of experience leading both front-end and<br>back-end development, and performing quality assurance. Led teams of 5-15 people<br>across technology, business, and design departments.<br>~~Learning Backend Development. <br>~~Exploring: Open Source, Next.js, CS Algorithms<br>~~Ask me anything about Frontend Development<br>~~How to reach me: tanishkgoswami527@gmail.com<br>
+Full-Stack Developer with two years of experience leading both front-end and back-end development, and performing quality assurance. Led teams of 5-15 people across technology, business, and design departments.<br><br>~~Learning Backend Development. <br>~~Exploring: Open Source, Next.js, CS Algorithms<br>~~Ask me anything about Frontend Development<br>~~How to reach me: tanishkgoswami527@gmail.com<br>
 
 
 ## 🌐 Socials:
