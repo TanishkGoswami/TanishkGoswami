@@ -215,11 +215,115 @@ function generateBrowserPreview(readmeContent, cssContent) {
   fs.writeFileSync(PREVIEW_PATH, fullHtml, 'utf8');
 }
 
-// Main Build Function
-function build() {
-  const startTime = Date.now();
+// Dynamic GitHub API Project Fetcher Engine
+async function fetchDynamicProjects(data) {
+  const cfg = data.dynamicConfig;
+  if (!cfg || !cfg.enabled) return data.projects;
+
+  console.log(`\x1b[36m[i] Fetching live repositories for @${data.githubUsername} from GitHub API...\x1b[0m`);
+  const headers = {
+    'Accept': 'application/vnd.github.v3+json',
+    'User-Agent': 'TanishkGoswami-README-Sync-Bot'
+  };
+  if (process.env.GITHUB_TOKEN) {
+    headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
+  }
+
   try {
-    // Clear require cache for data.js during live watch
+    const res = await fetch(`https://api.github.com/users/${data.githubUsername}/repos?per_page=100&sort=updated`, { headers });
+    const repos = res.ok ? await res.json() : [];
+    const publicRepos = Array.isArray(repos) ? repos.filter(r => !r.private && !r.fork && r.name !== data.githubUsername) : [];
+
+    // Helper to convert markdown links inside description to HTML anchor tags
+    const formatLinks = (desc) => {
+      return desc.replace(/\[\*\*([^\]]+)\*\*\]\(([^)]+)\)/g, '<a href="$2" target="_blank"><strong>$1</strong></a>')
+                 .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank"><strong>$1</strong></a>');
+    };
+
+    const dynamicProjects = [];
+    const matchedRepoNames = new Set();
+
+    // 1. Process all static flagship projects from data.projects first to guarantee they stay featured
+    for (const p of data.projects) {
+      let cleanTitle = p.title.split(' ⭐')[0];
+      let desc = formatLinks(p.description);
+
+      // Try to find matching public repo on GitHub to attach live star count or GitHub URL
+      const matchingRepo = publicRepos.find(r => 
+        r.name.toLowerCase() === cleanTitle.toLowerCase() ||
+        cleanTitle.toLowerCase().includes(r.name.toLowerCase()) ||
+        (r.name.toLowerCase() === 'gap_whatsapp' && cleanTitle.toLowerCase().includes('gap')) ||
+        (r.name.toLowerCase() === 'broadcastpilot' && cleanTitle.toLowerCase().includes('broadcast'))
+      );
+
+      let starBadge = '';
+      if (matchingRepo) {
+        matchedRepoNames.add(matchingRepo.name.toLowerCase());
+        if (matchingRepo.stargazers_count > 0) {
+          starBadge = ` ⭐ ${matchingRepo.stargazers_count}`;
+        }
+        // If static description doesn't already have links, add them
+        if (!desc.includes('<a href=')) {
+          let linksHtml = `<a href="${matchingRepo.html_url}" target="_blank"><strong>GitHub Repo</strong></a>`;
+          if (matchingRepo.homepage && matchingRepo.homepage.startsWith('http')) {
+            linksHtml = `<a href="${matchingRepo.homepage}" target="_blank"><strong>Live Demo</strong></a> &nbsp;·&nbsp; ` + linksHtml;
+          }
+          desc = `${desc}<br/><br/>${linksHtml}`;
+        }
+      }
+
+      dynamicProjects.push({
+        title: `${cleanTitle}${starBadge}`,
+        description: desc
+      });
+    }
+
+    // 2. Add any remaining public repos that have stars or are tagged 'featured' (up to maxProjects or more)
+    const extraRepos = publicRepos.filter(r => !matchedRepoNames.has(r.name.toLowerCase()) && (r.stargazers_count > 0 || (r.topics && r.topics.includes('featured'))));
+    extraRepos.sort((a, b) => b.stargazers_count - a.stargazers_count || new Date(b.updated_at) - new Date(a.updated_at));
+
+    for (const r of extraRepos) {
+      if (dynamicProjects.length >= (cfg.maxProjects || 6)) break;
+      let desc = r.description || "Production system repository.";
+      
+      // Try fetching first paragraph of README
+      try {
+        const readmeRes = await fetch(`https://raw.githubusercontent.com/${data.githubUsername}/${r.name}/${r.default_branch || 'main'}/README.md`);
+        if (readmeRes.ok) {
+          const rawReadme = await readmeRes.text();
+          const lines = rawReadme.split('\n').filter(l => l.trim() && !l.trim().startsWith('#') && !l.trim().startsWith('![') && !l.trim().startsWith('<') && !l.trim().startsWith('['));
+          if (lines.length > 0 && lines[0].length > 30) {
+            desc = lines[0].substring(0, 160).trim() + (lines[0].length > 160 ? '...' : '');
+          }
+        }
+      } catch (e) {
+        // ignore
+      }
+
+      const starBadge = r.stargazers_count > 0 ? ` ⭐ ${r.stargazers_count}` : '';
+      let linksHtml = `<a href="${r.html_url}" target="_blank"><strong>GitHub Repo</strong></a>`;
+      if (r.homepage && r.homepage.startsWith('http')) {
+        linksHtml = `<a href="${r.homepage}" target="_blank"><strong>Live Demo</strong></a> &nbsp;·&nbsp; ` + linksHtml;
+      }
+
+      dynamicProjects.push({
+        title: `${r.name}${starBadge}`,
+        description: `${desc}<br/><br/>${linksHtml}`
+      });
+    }
+
+    return dynamicProjects;
+  } catch (err) {
+    console.error(`\x1b[31m[!] Error in fetchDynamicProjects:\x1b[0m`, err.message);
+    return data.projects;
+  }
+}
+
+// Main Build Function
+async function build() {
+  const startTime = Date.now();
+  const isDynamic = process.argv.includes('--dynamic');
+  try {
     delete require.cache[require.resolve(path.join(SRC_DIR, 'data.js'))];
     const data = require(path.join(SRC_DIR, 'data.js'));
     const cssContent = fs.readFileSync(path.join(SRC_DIR, 'style.css'), 'utf8');
@@ -229,6 +333,14 @@ function build() {
 
     // 1. Generate SVG Banners
     generateBanners(data, cssVars);
+
+    // If --dynamic flag is passed, fetch live repo stats from GitHub API
+    if (isDynamic) {
+      const dynamicProjects = await fetchDynamicProjects(data);
+      if (dynamicProjects && dynamicProjects.length > 0) {
+        data.projects = dynamicProjects;
+      }
+    }
 
     // 2. Compile Variables
     let output = templateContent;

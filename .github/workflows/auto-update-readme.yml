@@ -1,0 +1,51 @@
+name: Auto-Update Dynamic README & Projects
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    # Allows manual 1-click execution from GitHub Actions UI
+
+permissions:
+  contents: write
+
+jobs:
+  update-profile-readme:
+    name: Sync Live Repos & Compile README
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Dynamic Sync & Compile README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node sync.js --dynamic --once
+
+      - name: Check for File Changes
+        id: git-check
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and Push Updated Profile
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md preview.html src/data.js assets/
+          git commit -m "⚡ auto-sync: update dynamic profile projects and GitHub stats"
+          git push

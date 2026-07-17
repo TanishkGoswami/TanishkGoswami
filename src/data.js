@@ -81,5 +81,11 @@ I sit at the intersection of **product architecture** and **hands-on implementat
     }
   ],
   githubUsername: "TanishkGoswami",
+  dynamicConfig: {
+    enabled: true,
+    maxProjects: 6,
+    priorityRepos: ["gap-whatsapp", "QuickPost", "SuperMailBox", "BroadcastPilot", "truwok-platform"],
+    persistToDataFile: true
+  },
   connectText: "Open to freelance collaborations, architecture discussions, technical advisory, and full-stack leadership roles."
 };

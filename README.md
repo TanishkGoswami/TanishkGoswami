@@ -34,13 +34,13 @@ Outside of leading my engineering team at Metabull, I build and run **Truwok** (
 <td width="50%" valign="top">
 
 **GAP AI Agent**
-AI-first WhatsApp business automation platform. Features flow-based routing with general-purpose fallback LLM logic, session-state persistence, click-to-WhatsApp ad attribution, and embedded self-serve signup via WhatsApp Cloud API.<br/><br/>[**Live Platform**](https://gap-whatsapp.vercel.app)
+AI-first WhatsApp business automation platform. Features flow-based routing with general-purpose fallback LLM logic, session-state persistence, click-to-WhatsApp ad attribution, and embedded self-serve signup via WhatsApp Cloud API.<br/><br/><a href="https://gap-whatsapp.vercel.app" target="_blank"><strong>Live Platform</strong></a>
 
 </td>
 <td width="50%" valign="top">
 
 **QuickPost**
-AI-powered social media scheduling & Instagram Auto-DM platform. Contextually interprets comment/DM intent to automate customer engagement, backed by a 3-tier Razorpay subscription architecture with idempotency and entitlement handling.<br/><br/>[**Live Platform**](https://quick-post-livid.vercel.app)
+AI-powered social media scheduling & Instagram Auto-DM platform. Contextually interprets comment/DM intent to automate customer engagement, backed by a 3-tier Razorpay subscription architecture with idempotency and entitlement handling.<br/><br/><a href="https://quick-post-livid.vercel.app" target="_blank"><strong>Live Platform</strong></a>
 
 </td>
 </tr>
@@ -54,7 +54,7 @@ Multi-tenant CPaaS (Communication Platform as a Service) layer serving 6+ intern
 <td width="50%" valign="top">
 
 **BroadcastPilot**
-AI-assisted broadcast campaign platform. Helps businesses automatically draft, personalize, and optimize messaging campaigns with smart audience segmentation and send-time logic without manual configuration.<br/><br/>[**Live Platform**](https://vercel.com/designwithtanishk/broadcast-pilot)
+AI-assisted broadcast campaign platform. Helps businesses automatically draft, personalize, and optimize messaging campaigns with smart audience segmentation and send-time logic without manual configuration.<br/><br/><a href="https://vercel.com/designwithtanishk/broadcast-pilot" target="_blank"><strong>Live Platform</strong></a>
 
 </td>
 </tr>
@@ -62,7 +62,7 @@ AI-assisted broadcast campaign platform. Helps businesses automatically draft, p
 <td width="50%" valign="top">
 
 **Truwok**
-Solo-built freelancer marketplace engineered end-to-end from database modeling to deployment. Connects independent professionals with high-growth businesses.<br/><br/>[**Live Platform**](https://truwok.com)
+Solo-built freelancer marketplace engineered end-to-end from database modeling to deployment. Connects independent professionals with high-growth businesses.<br/><br/><a href="https://truwok.com" target="_blank"><strong>Live Platform</strong></a>
 
 </td>
 <td width="50%" valign="top">
