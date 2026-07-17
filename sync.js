@@ -126,9 +126,51 @@ function generateTechStackRows(techStack = []) {
 </tr>`).join('\n');
 }
 
-// Generate Social Badges
+// Helper: Create Sleek Glassmorphism SVG Pill Buttons
+function createSleekPillSvg(s) {
+  let iconPath = '';
+  if (s.name.toLowerCase() === 'portfolio') {
+    iconPath = `<polygon points="12,4 2,20 22,20" fill="#FFFFFF"/>`;
+  } else if (s.name.toLowerCase() === 'linkedin') {
+    iconPath = `<path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2v-8.37H6.46M7.83 6.18a1.66 1.66 0 0 0-1.67 1.67 1.66 1.66 0 0 0 1.67 1.67 1.66 1.66 0 0 0 1.67-1.67 1.66 1.66 0 0 0-1.67-1.67z" fill="#0A66C2"/>`;
+  } else if (s.name.toLowerCase() === 'email') {
+    iconPath = `<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#EA4335"/>`;
+  } else {
+    iconPath = `<circle cx="12" cy="12" r="8" fill="#6366F1"/>`;
+  }
+
+  const width = 148;
+  const height = 42;
+
+  return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad_${s.name}" x1="0" y1="0" x2="${width}" y2="${height}" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#161B22" stop-opacity="0.98"/>
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="borderGrad_${s.name}" x1="0" y1="0" x2="${width}" y2="${height}" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#30363D" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="${width - 2}" height="${height - 2}" rx="20" fill="url(#bgGrad_${s.name})" stroke="url(#borderGrad_${s.name})" stroke-width="1.5"/>
+  <g transform="translate(16, 9)">
+    ${iconPath}
+  </g>
+  <text x="48" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-size="14" font-weight="600" fill="#F0F6FC" letter-spacing="0.3">${s.name}</text>
+  <path d="M120 18h6m0 0l-3-3m3 3l-3 3" stroke="#8B949E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+}
+
+// Generate Social Badges (Custom SVG Pills)
 function generateSocialBadges(socials = []) {
-  return socials.map(s => `<a href="${s.url}" target="_blank"><img src="https://img.shields.io/badge/${s.name}-${s.color}?style=flat-square&logo=${s.logo}&logoColor=white" alt="${s.name}"/></a>`).join('\n');
+  return socials.map(s => {
+    const filename = `badge-${s.name.toLowerCase()}.svg`;
+    const filepath = path.join(ASSETS_DIR, filename);
+    const svgContent = createSleekPillSvg(s);
+    fs.writeFileSync(filepath, svgContent, 'utf8');
+    return `<a href="${s.url}" target="_blank"><img src="assets/${filename}" height="42" alt="${s.name}"/></a>`;
+  }).join(' &nbsp;&nbsp; ');
 }
 
 // Generate Connect Links

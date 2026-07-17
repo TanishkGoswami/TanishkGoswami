@@ -4,9 +4,7 @@
 
 <br/><br/>
 
-<a href="https://tanishkgoswami-portfolio.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-4F46E5?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio"/></a>
-<a href="https://www.linkedin.com/in/designwithtanishk/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-4F46E5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-<a href="mailto:designwithtanishk@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-4F46E5?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+<a href="https://tanishkgoswami-portfolio.vercel.app/" target="_blank"><img src="assets/badge-portfolio.svg" height="42" alt="Portfolio"/></a> &nbsp;&nbsp; <a href="https://www.linkedin.com/in/designwithtanishk/" target="_blank"><img src="assets/badge-linkedin.svg" height="42" alt="LinkedIn"/></a> &nbsp;&nbsp; <a href="mailto:designwithtanishk@gmail.com" target="_blank"><img src="assets/badge-email.svg" height="42" alt="Email"/></a>
 
 </div>
 
@@ -33,7 +31,7 @@ Outside of leading my engineering team at Metabull, I build and run **Truwok** (
 <tr>
 <td width="50%" valign="top">
 
-**GAP AI Agent**
+**GAP AI Agent ⭐ 1**
 AI-first WhatsApp business automation platform. Features flow-based routing with general-purpose fallback LLM logic, session-state persistence, click-to-WhatsApp ad attribution, and embedded self-serve signup via WhatsApp Cloud API.<br/><br/><a href="https://gap-whatsapp.vercel.app" target="_blank"><strong>Live Platform</strong></a>
 
 </td>
