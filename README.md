@@ -24,7 +24,7 @@ Outside of leading my engineering team at Metabull, I build and run **Truwok** (
 
 ## 🛠️ Production Systems & Architecture
 
-<table>
+<table width="100%">
 <tr>
 <td width="50%" valign="top">
 
@@ -73,35 +73,41 @@ Internal unified messaging architecture supporting WhatsApp, SMS, email, and CRM
 
 ## 🚀 Core Competencies & Stack
 
-<table>
+<table width="100%">
 <tr>
-<td valign="top" width="25%"><strong>Frontend Development</strong></td>
-<td valign="top">
-<img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,tailwind,html,css&theme=dark" height="32"/>
+<td width="50%" valign="top">
+
+**Frontend Development**<br/><br/><img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,tailwind,html,css&theme=dark" height="38"/>
+
+</td>
+<td width="50%" valign="top">
+
+**Backend & Architecture**<br/><br/><img src="https://skillicons.dev/icons?i=nodejs,express,graphql&theme=dark" height="38"/>
+
 </td>
 </tr>
 <tr>
-<td valign="top" width="25%"><strong>Backend & Architecture</strong></td>
-<td valign="top">
-<img src="https://skillicons.dev/icons?i=nodejs,express,graphql&theme=dark" height="32"/>
+<td width="50%" valign="top">
+
+**Databases & Caching**<br/><br/><img src="https://skillicons.dev/icons?i=postgres,redis,supabase,docker&theme=dark" height="38"/>
+
+</td>
+<td width="50%" valign="top">
+
+**DevOps & Tooling**<br/><br/><img src="https://skillicons.dev/icons?i=git,github,vscode,postman&theme=dark" height="38"/>
+
 </td>
 </tr>
 <tr>
-<td valign="top" width="25%"><strong>Databases & Caching</strong></td>
-<td valign="top">
-<img src="https://skillicons.dev/icons?i=postgres,redis,supabase,docker&theme=dark" height="32"/>
+<td width="50%" valign="top">
+
+**UI/UX & Product Design**<br/><br/><img src="https://skillicons.dev/icons?i=figma,ps,ai,xd,canva,blender&theme=dark" height="38"/>
+
 </td>
-</tr>
-<tr>
-<td valign="top" width="25%"><strong>DevOps & Tooling</strong></td>
-<td valign="top">
-<img src="https://skillicons.dev/icons?i=git,github,vscode,postman&theme=dark" height="32"/>
-</td>
-</tr>
-<tr>
-<td valign="top" width="25%"><strong>UI/UX & Product Design</strong></td>
-<td valign="top">
-<img src="https://skillicons.dev/icons?i=figma,ps,ai,xd,canva,blender&theme=dark" height="32"/>
+<td width="50%" valign="top">
+
+**Cloud & AI Infrastructure**<br/><br/><img src="https://skillicons.dev/icons?i=py,gcp,aws,vercel,linux,nginx&theme=dark" height="38"/>
+
 </td>
 </tr>
 </table>

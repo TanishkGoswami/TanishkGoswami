@@ -79,6 +79,10 @@ I sit at the intersection of **product architecture** and **hands-on implementat
     {
       category: "UI/UX & Product Design",
       icons: "figma,ps,ai,xd,canva,blender"
+    },
+    {
+      category: "Cloud & AI Infrastructure",
+      icons: "py,gcp,aws,vercel,linux,nginx"
     }
   ],
   githubUsername: "TanishkGoswami",

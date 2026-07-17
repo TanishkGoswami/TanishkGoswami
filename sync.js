@@ -116,14 +116,20 @@ function generateProjectsGrid(projects = []) {
   return html.trimEnd();
 }
 
-// Generate Tech Stack Table Rows
+// Generate Tech Stack Table Rows (Full-Width 2-Column Balanced Grid)
 function generateTechStackRows(techStack = []) {
-  return techStack.map(item => `<tr>
-<td valign="top" width="25%"><strong>${item.category}</strong></td>
-<td valign="top">
-<img src="https://skillicons.dev/icons?i=${item.icons}&theme=dark" height="32"/>
-</td>
-</tr>`).join('\n');
+  let html = '';
+  for (let i = 0; i < techStack.length; i += 2) {
+    const left = techStack[i];
+    const right = techStack[i + 1];
+
+    if (right) {
+      html += `<tr>\n<td width="50%" valign="top">\n\n**${left.category}**<br/><br/><img src="https://skillicons.dev/icons?i=${left.icons}&theme=dark" height="38"/>\n\n</td>\n<td width="50%" valign="top">\n\n**${right.category}**<br/><br/><img src="https://skillicons.dev/icons?i=${right.icons}&theme=dark" height="38"/>\n\n</td>\n</tr>\n`;
+    } else {
+      html += `<tr>\n<td colspan="2" width="100%" valign="top">\n\n**${left.category}**<br/><br/><img src="https://skillicons.dev/icons?i=${left.icons}&theme=dark" height="38"/>\n\n</td>\n</tr>\n`;
+    }
+  }
+  return html.trimEnd();
 }
 
 // Helper: Create Sleek Glassmorphism SVG Pill Buttons
