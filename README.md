@@ -101,6 +101,12 @@ Internal unified messaging architecture supporting WhatsApp, SMS, email, and CRM
 <img src="https://skillicons.dev/icons?i=git,github,vscode,postman&theme=dark" height="32"/>
 </td>
 </tr>
+<tr>
+<td valign="top" width="25%"><strong>UI/UX & Product Design</strong></td>
+<td valign="top">
+<img src="https://skillicons.dev/icons?i=figma,ps,ai,xd,canva,blender&theme=dark" height="32"/>
+</td>
+</tr>
 </table>
 
 <br/>

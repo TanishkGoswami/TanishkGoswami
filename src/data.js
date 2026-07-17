@@ -78,6 +78,10 @@ I sit at the intersection of **product architecture** and **hands-on implementat
     {
       category: "DevOps & Tooling",
       icons: "git,github,vscode,postman"
+    },
+    {
+      category: "UI/UX & Product Design",
+      icons: "figma,ps,ai,xd,canva,blender"
     }
   ],
   githubUsername: "TanishkGoswami",
