@@ -110,8 +110,15 @@ Internal unified messaging architecture supporting WhatsApp, SMS, email, and CRM
 ## 📊 GitHub Activity
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api?username=TanishkGoswami&show_icons=true&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=E6EDF3&icon_color=4F46E5&text_color=8B949E">
-  <img src="https://github-readme-stats-fast.vercel.app/api?username=TanishkGoswami&show_icons=true&theme=default&hide_border=true&bg_color=FFFFFF&title_color=1F2328&icon_color=4338CA&text_color=656D76" width="100%" alt="GitHub stats">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TanishkGoswami&theme=github_dark">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=TanishkGoswami&theme=default" width="100%" alt="GitHub Profile Summary">
+</picture>
+
+<br/><br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=TanishkGoswami&theme=github-dark-blue">
+  <img src="https://streak-stats.demolab.com?user=TanishkGoswami&theme=default" width="100%" alt="GitHub Streak Stats">
 </picture>
 
 <br/>
