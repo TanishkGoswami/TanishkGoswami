@@ -12,16 +12,13 @@
 
 ## ⚡ Overview & Leadership
 
-> [!TIP]
-> **Leadership & Engineering Excellence:** Promoted to **Team Lead within the first year** of my professional career at **Metabull Universe**, currently leading a team of 5–9 software developers through sprint planning, architecture design, and end-to-end delivery of multi-tenant SaaS applications.
+> **👑 Leadership & Engineering Excellence:** Promoted to **Team Lead within the first year** of my professional career at **Metabull Universe**, currently leading a team of 5–9 software developers through sprint planning, architecture design, and end-to-end delivery of multi-tenant SaaS applications.
 
 I sit at the intersection of **product architecture** and **hands-on implementation**. My core focus is building resilient backend infrastructures, integrating complex enterprise platforms (Meta Graph API, WhatsApp Cloud API, OAuth 2.0, Twilio, Razorpay), and developing AI-powered automation engines that solve high-impact business challenges.
 
 Outside of leading my engineering team at Metabull, I build and run **Truwok** ([truwok.com](https://truwok.com)), a solo-developed freelancer marketplace — owning everything from database schema to production deployment.
 
-> [!NOTE]
-> **Core Stack:** React.js, Next.js, Node.js, Express.js, TypeScript, PostgreSQL, Redis, Supabase, BullMQ  
-> **Enterprise Integrations:** Meta WhatsApp Cloud API, Meta Graph API, OAuth 2.0, Google APIs, Twilio, Razorpay
+> **⚡ Enterprise Integrations & Cloud Infrastructure:** Meta WhatsApp Cloud API · Meta Graph API · OAuth 2.0 · Google Cloud APIs · Twilio · Razorpay · BullMQ · Redis Pub/Sub
 
 <br/>
 
