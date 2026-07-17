@@ -105,4 +105,4 @@ Solo-built freelancer marketplace — [truwok.com](https://truwok.com)
 
 Open to freelance collaborations, architecture discussions, and full-stack roles.
 
-[**Portfolio**](https://your-portfolio-url.com) &nbsp;·&nbsp; [**LinkedIn**](https://linkedin.com/in/your-linkedin) &nbsp;·&nbsp; [**Email**](mailto:you@example.com)
+[**Portfolio**](https://tanishkgoswami-portfolio.vercel.app/) &nbsp;·&nbsp; [**LinkedIn**](https://www.linkedin.com/in/designwithtanishk/) &nbsp;·&nbsp; [**Email**](mailto:designwithtanishk@gmail.com)
