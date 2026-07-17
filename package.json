@@ -1,0 +1,20 @@
+{
+  "name": "tanishk-github-readme",
+  "version": "1.0.0",
+  "description": "Automated HTML/CSS/JS Sync System for GitHub README and SVG Banners",
+  "main": "sync.js",
+  "scripts": {
+    "build": "node sync.js --once",
+    "watch": "node sync.js --watch",
+    "dev": "node sync.js --watch"
+  },
+  "keywords": [
+    "github",
+    "readme",
+    "sync",
+    "automation",
+    "svg"
+  ],
+  "author": "Tanishk Goswami",
+  "license": "MIT"
+}

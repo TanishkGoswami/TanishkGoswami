@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Local Agent & IDE folders
+.agents/
+.gemini/
+.vscode/
+.idea/
+skills-lock.json
+*.swp
+*.swo
+
+# Environment Variables & Sensitive Files
+.env
+.env.local
+.env.*
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Private Documents & Resumes (Contains personal contact numbers / word docs)
+info/
+*.pdf
+*.docx
+
+# OS Generated Files
+.DS_Store
+Thumbs.db

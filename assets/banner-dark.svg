@@ -15,7 +15,7 @@
   </text>
 
   <text x="64" y="166" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#8B949E">
-    Full-Stack Engineer &#183; Team Lead, Metabull Universe
+    Full-Stack Engineer · Team Lead at Metabull Universe
   </text>
 
   <text x="1136" y="100" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#8B949E" letter-spacing="1">
@@ -23,12 +23,12 @@
   </text>
 
   <text x="1136" y="126" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#4F46E5" letter-spacing="1">
-    BUILDING SAAS SYSTEMS
+    BUILDING SAAS & AI SYSTEMS
   </text>
 
   <line x1="64" y1="210" x2="1136" y2="210" stroke="#21262D" stroke-width="1"/>
 
   <text x="64" y="238" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#6E7681">
-    React &#183; Next.js &#183; Node.js &#183; TypeScript &#183; PostgreSQL &#183; Redis &#183; Supabase
+    React · Next.js · Node.js · TypeScript · PostgreSQL · Redis · Supabase · BullMQ
   </text>
 </svg>
