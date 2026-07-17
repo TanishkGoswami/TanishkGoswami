@@ -128,12 +128,12 @@ function generateTechStackRows(techStack = []) {
 
 // Generate Social Badges
 function generateSocialBadges(socials = []) {
-  return socials.map(s => `[![${s.name}](https://img.shields.io/badge/${s.name}-${s.color}?style=flat-square&logo=${s.logo}&logoColor=white)](${s.url})`).join('\n');
+  return socials.map(s => `<a href="${s.url}" target="_blank"><img src="https://img.shields.io/badge/${s.name}-${s.color}?style=flat-square&logo=${s.logo}&logoColor=white" alt="${s.name}"/></a>`).join('\n');
 }
 
 // Generate Connect Links
 function generateConnectLinks(socials = []) {
-  return socials.map(s => `[**${s.name}**](${s.url})`).join(' &nbsp;·&nbsp; ');
+  return socials.map(s => `<a href="${s.url}" target="_blank"><strong>${s.name}</strong></a>`).join(' &nbsp;·&nbsp; ');
 }
 
 // Generate HTML Live Preview for Local Browser Testing

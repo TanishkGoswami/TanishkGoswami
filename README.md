@@ -4,9 +4,9 @@
 
 <br/><br/>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-4F46E5?style=flat-square&logo=vercel&logoColor=white)](https://tanishkgoswami-portfolio.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-4F46E5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/designwithtanishk/)
-[![Email](https://img.shields.io/badge/Email-4F46E5?style=flat-square&logo=gmail&logoColor=white)](mailto:designwithtanishk@gmail.com)
+<a href="https://tanishkgoswami-portfolio.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-4F46E5?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio"/></a>
+<a href="https://www.linkedin.com/in/designwithtanishk/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-4F46E5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="mailto:designwithtanishk@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-4F46E5?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
 
 </div>
 
@@ -130,7 +130,7 @@ Open to freelance collaborations, architecture discussions, technical advisory, 
 <br/>
 
 <div align="center">
-  [**Portfolio**](https://tanishkgoswami-portfolio.vercel.app/) &nbsp;·&nbsp; [**LinkedIn**](https://www.linkedin.com/in/designwithtanishk/) &nbsp;·&nbsp; [**Email**](mailto:designwithtanishk@gmail.com)
+  <a href="https://tanishkgoswami-portfolio.vercel.app/" target="_blank"><strong>Portfolio</strong></a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/designwithtanishk/" target="_blank"><strong>LinkedIn</strong></a> &nbsp;·&nbsp; <a href="mailto:designwithtanishk@gmail.com" target="_blank"><strong>Email</strong></a>
 </div>
 
 <br/><br/>
