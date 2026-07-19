@@ -34,7 +34,7 @@ AI-first WhatsApp business automation platform. Features flow-based routing with
 </td>
 <td width="50%" valign="top">
 
-**QuickPost**
+**QuickPost ⭐ 2**
 AI-powered social media scheduling & Instagram Auto-DM platform. Contextually interprets comment/DM intent to automate customer engagement, backed by a 3-tier Razorpay subscription architecture with idempotency and entitlement handling.<br/><br/><a href="https://quick-post-livid.vercel.app" target="_blank"><strong>Live Platform</strong></a>
 
 </td>
