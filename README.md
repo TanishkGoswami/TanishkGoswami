@@ -28,13 +28,13 @@ Outside of leading my engineering team at Metabull, I build and run **Truwok** (
 <tr>
 <td width="50%" valign="top">
 
-**GAP AI Agent ⭐ 2**
+**GAP AI Agent**
 AI-first WhatsApp business automation platform. Features flow-based routing with general-purpose fallback LLM logic, session-state persistence, click-to-WhatsApp ad attribution, and embedded self-serve signup via WhatsApp Cloud API.<br/><br/><a href="https://gap-whatsapp.vercel.app" target="_blank"><strong>Live Platform</strong></a>
 
 </td>
 <td width="50%" valign="top">
 
-**QuickPost ⭐ 3**
+**QuickPost**
 AI-powered social media scheduling & Instagram Auto-DM platform. Contextually interprets comment/DM intent to automate customer engagement, backed by a 3-tier Razorpay subscription architecture with idempotency and entitlement handling.<br/><br/><a href="https://quick-post-livid.vercel.app" target="_blank"><strong>Live Platform</strong></a>
 
 </td>
